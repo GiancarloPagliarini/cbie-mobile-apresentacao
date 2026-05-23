@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
+  <title>CBIE Mobile · Apresentação Oficial</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Sora:wght@500;600;700;800;900&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css?v=2" />
+</head>
+
+<body>
+
+  <!-- Camada de fundo: orbs flutuantes + grid -->
+  <div class="bg-layer">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+    <div class="orb orb-4"></div>
+    <div class="grid-overlay"></div>
+    <div class="noise"></div>
+  </div>
+
+  <!-- HUD topo -->
+  <header class="hud">
+    <div class="hud-brand">
+      <div class="hud-logo">
+        <span class="logo-c">C</span><span class="logo-bar"></span>
+        <span class="logo-b">B</span><span class="logo-bar"></span>
+        <span class="logo-i">I</span><span class="logo-bar"></span>
+        <span class="logo-e">E</span>
+      </div>
+      <div class="hud-sub">MOBILE · APRESENTAÇÃO OFICIAL</div>
+    </div>
+    <div class="hud-meta">
+      <span class="hud-year">2026</span>
+      <span class="hud-dot"></span>
+      <span class="hud-status"><span class="pulse"></span> AO VIVO</span>
+    </div>
+  </header>
+
+  <!-- Deck de slides -->
+  <main class="deck">
+
+    <!-- ========== SLIDE 1 · CAPA ========== -->
+    <section class="slide slide-cover active" data-slide="cover">
+      <div class="slide-inner">
+        <div class="cover-tag">
+          <span class="cover-tag-dot"></span>
+          NOVO · APLICATIVO MOBILE
+        </div>
+        <h1 class="cover-title">
+          <span class="reveal">A inteligência da</span>
+          <span class="reveal cover-accent">infraestrutura</span>
+          <span class="reveal">energética brasileira,</span>
+          <span class="reveal">agora no seu bolso.</span>
+        </h1>
+      </div>
+
+      <!-- Phone preview à direita -->
+      <div class="cover-phone-stage">
+        <div class="phone phone-tilt">
+          <div class="phone-glow"></div>
+          <div class="phone-frame">
+            <div class="phone-notch"></div>
+            <div class="phone-screen">
+              <div class="cover-screen">
+                <div class="cs-logo">
+                  <span class="cs-c">C</span><span class="cs-b">B</span><span class="cs-i">I</span><span
+                    class="cs-e">E</span>
+                </div>
+                <div class="cs-sub">Centro Brasileiro de Infraestrutura</div>
+                <div class="cs-loader">
+                  <div class="cs-loader-bar"></div>
+                </div>
+                <div class="cs-version">v 1.0 · Mobile</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== SLIDE 2 · LOGIN ========== -->
+    <section class="slide slide-login" data-slide="login">
+      <div class="slide-side">
+        <div class="side-tag">01 · Acesso Seguro</div>
+        <h2 class="side-title">
+          Login com a <span class="side-accent">identidade</span> CBIE.
+        </h2>
+        <p class="side-desc">
+          Acesso rápido e seguro, com sessão persistente e biometria opcional. A mesma experiência do sistema web,
+          agora otimizada para o toque.
+        </p>
+        <ul class="side-list">
+          <li><span class="side-check"></span>Recuperação de senha via e-mail</li>
+          <li><span class="side-check"></span>Biometria · Face ID / Touch ID</li>
+          <li><span class="side-check"></span>Identidade visual coerente com a marca</li>
+        </ul>
+      </div>
+
+      <div class="slide-stage">
+        <div class="phone phone-tilt">
+          <div class="phone-glow"></div>
+          <div class="phone-frame">
+            <div class="phone-notch"></div>
+            <div class="phone-screen">
+              <div class="login-screen">
+                <div class="status-bar">
+                  <span>9:41</span>
+                  <div class="status-icons">
+                    <span class="si signal"></span>
+                    <span class="si wifi"></span>
+                    <span class="si battery"></span>
+                  </div>
+                </div>
+
+                <div class="login-hero">
+                  <div class="login-logo">
+                    <span>C</span><span>B</span><span>I</span><span>E</span>
+                  </div>
+                  <div class="login-tag">CENTRO BRASILEIRO DE INFRAESTRUTURA</div>
+                </div>
+
+                <h3 class="login-title">Bem-vindo<br />de volta.</h3>
+                <p class="login-sub">Entre para continuar.</p>
+
+                <div class="login-form">
+                  <div class="input">
+                    <span class="input-label">E-mail</span>
+                    <span class="input-value">contato@cbie.com.br</span>
+                    <span class="input-line"></span>
+                  </div>
+                  <div class="input">
+                    <span class="input-label">Senha</span>
+                    <span class="input-value">••••••••••</span>
+                    <span class="input-line"></span>
+                  </div>
+                  <button class="login-btn">
+                    <span>Entrar</span>
+                    <span class="login-btn-arrow">→</span>
+                  </button>
+                  <button class="login-bio">
+                    <span class="bio-icon"></span>
+                    Entrar com Face ID
+                  </button>
+                  <a class="login-link">Esqueci minha senha</a>
+                </div>
+
+                <div class="login-foot">
+                  v 1.0 · CBIE © 2026
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== SLIDE 3 · DASHBOARD ========== -->
+    <section class="slide slide-dashboard" data-slide="dashboard">
+      <div class="slide-side">
+        <div class="side-tag">02 · Painel do Cliente</div>
+        <h2 class="side-title">
+          Todo o <span class="side-accent">setor energético</span> em uma tela.
+        </h2>
+        <p class="side-desc">
+          Setor Elétrico, Petróleo & Gás, Biocombustíveis e Legislação. KPIs em tempo real e gráficos interativos
+          pensados para mobile.
+        </p>
+        <div class="side-grid">
+          <div class="side-card">
+            <span class="side-card-num">19</span>
+            <span class="side-card-label">Análises disponíveis</span>
+          </div>
+          <div class="side-card">
+            <span class="side-card-num">24/7</span>
+            <span class="side-card-label">Dados atualizados</span>
+          </div>
+          <div class="side-card">
+            <span class="side-card-num">100%</span>
+            <span class="side-card-label">Responsivo</span>
+          </div>
+          <div class="side-card">
+            <span class="side-card-num">PNG</span>
+            <span class="side-card-label">Export de gráficos</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="slide-stage">
+        <div class="phone phone-tilt">
+          <div class="phone-glow"></div>
+          <div class="phone-frame">
+            <div class="phone-notch"></div>
+            <div class="phone-screen">
+              <div class="dash-screen">
+                <div class="status-bar">
+                  <span>9:41</span>
+                  <div class="status-icons">
+                    <span class="si signal"></span>
+                    <span class="si wifi"></span>
+                    <span class="si battery"></span>
+                  </div>
+                </div>
+
+                <div class="dash-header">
+                  <div>
+                    <div class="dash-hi">Bom dia, Ricardo</div>
+                    <div class="dash-date">Sex · 23 Mai 2026</div>
+                  </div>
+                  <div class="dash-avatar">R</div>
+                </div>
+
+                <div class="dash-kpis">
+                  <div class="kpi kpi-1">
+                    <div class="kpi-icon">⚡</div>
+                    <div class="kpi-label">PLD SE/CO</div>
+                    <div class="kpi-value">R$ 287<span>,40</span></div>
+                    <div class="kpi-trend up">+12,3%</div>
+                  </div>
+                  <div class="kpi kpi-2">
+                    <div class="kpi-icon">🛢</div>
+                    <div class="kpi-label">Brent</div>
+                    <div class="kpi-value">US$ 84<span>,30</span></div>
+                    <div class="kpi-trend up">+1,8%</div>
+                  </div>
+                </div>
+
+                <div class="dash-chart-card">
+                  <div class="dcc-head">
+                    <div>
+                      <div class="dcc-title">Geração por fonte</div>
+                      <div class="dcc-sub">Maio · 2026 · MWmed</div>
+                    </div>
+                    <div class="dcc-pill">Hoje</div>
+                  </div>
+                  <div class="dcc-bars">
+                    <div class="bar" data-h="78"><span>Hidro</span></div>
+                    <div class="bar" data-h="54"><span>Térm</span></div>
+                    <div class="bar" data-h="42"><span>Eólica</span></div>
+                    <div class="bar" data-h="36"><span>Solar</span></div>
+                    <div class="bar" data-h="22"><span>Nucl</span></div>
+                  </div>
+                </div>
+
+                <div class="dash-mini">
+                  <div class="mini">
+                    <div class="mini-label">Reservatórios SE/CO</div>
+                    <div class="mini-val">72,4%</div>
+                    <svg class="mini-spark" viewBox="0 0 100 30" preserveAspectRatio="none">
+                      <path d="M0,22 L15,18 L30,20 L45,12 L60,14 L75,8 L100,6" stroke="url(#g1)" stroke-width="2"
+                        fill="none" stroke-linecap="round" />
+                      <defs>
+                        <linearGradient id="g1" x1="0" y1="0" x2="100" y2="0" gradientUnits="userSpaceOnUse">
+                          <stop offset="0" stop-color="#ff7a1a" stop-opacity=".3" />
+                          <stop offset="1" stop-color="#ff7a1a" />
+                        </linearGradient>
+                      </defs>
+                    </svg>
+                  </div>
+                  <div class="mini">
+                    <div class="mini-label">Gás Natural · Demanda</div>
+                    <div class="mini-val">86,1 MMm³</div>
+                    <svg class="mini-spark" viewBox="0 0 100 30" preserveAspectRatio="none">
+                      <path d="M0,18 L20,14 L35,20 L50,10 L70,16 L85,8 L100,12" stroke="#ff9447" stroke-width="2"
+                        fill="none" stroke-linecap="round" />
+                    </svg>
+                  </div>
+                </div>
+
+                <div class="dash-tabs">
+                  <div class="tab active">
+                    <svg class="tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                      stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M3 11l9-8 9 8v10a1 1 0 0 1-1 1h-5v-7h-6v7H4a1 1 0 0 1-1-1z" />
+                    </svg>
+                    <span class="tab-label">Home</span>
+                  </div>
+                  <div class="tab">
+                    <svg class="tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                      stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M3 3v18h18" />
+                      <rect x="6" y="13" width="3" height="6" rx="0.6" />
+                      <rect x="11" y="9" width="3" height="10" rx="0.6" />
+                      <rect x="16" y="5" width="3" height="14" rx="0.6" />
+                    </svg>
+                    <span class="tab-label">Análises</span>
+                  </div>
+                  <div class="tab">
+                    <svg class="tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                      stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9" />
+                      <path d="M10 21a2 2 0 0 0 4 0" />
+                    </svg>
+                    <span class="tab-label">Alertas</span>
+                  </div>
+                  <div class="tab">
+                    <svg class="tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                      stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M12 3l1.8 4.7L18.5 9.5l-4.7 1.8L12 16l-1.8-4.7L5.5 9.5l4.7-1.8z" />
+                      <path d="M19 15l.9 2.3L22 18l-2.1.7L19 21l-.9-2.3L16 18l2.1-.7z" />
+                      <path d="M5 4l.6 1.5L7 6l-1.4.5L5 8l-.6-1.5L3 6l1.4-.5z" />
+                    </svg>
+                    <span class="tab-label">IA</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== SLIDE 4 · NOTIFICAÇÕES ========== -->
+    <section class="slide slide-notifications" data-slide="notifications">
+      <div class="slide-side">
+        <div class="side-tag">03 · Alertas Inteligentes</div>
+        <h2 class="side-title">
+          Notificações que <span class="side-accent">antecipam</span> o mercado.
+        </h2>
+        <p class="side-desc">
+          Movimentações de PLD, Brent, reservatórios e legislação chegam no momento certo.
+        </p>
+        <ul class="side-list">
+          <li><span class="side-check"></span>Variações relevantes de PLD e Brent</li>
+          <li><span class="side-check"></span>Publicações da ANEEL e ANP</li>
+          <li><span class="side-check"></span>Alertas customizáveis por setor</li>
+          <li><span class="side-check"></span>Push silencioso · Modo Não Perturbe</li>
+        </ul>
+      </div>
+
+      <div class="slide-stage">
+        <div class="phone phone-tilt">
+          <div class="phone-glow"></div>
+          <div class="phone-frame">
+            <div class="phone-notch"></div>
+            <div class="phone-screen">
+              <div class="notif-screen">
+                <div class="status-bar dark">
+                  <span>9:41</span>
+                  <div class="status-icons">
+                    <span class="si signal"></span>
+                    <span class="si wifi"></span>
+                    <span class="si battery"></span>
+                  </div>
+                </div>
+
+                <div class="lock-time">
+                  <div class="lock-hour">9:41</div>
+                  <div class="lock-date">sexta-feira, 23 de maio</div>
+                </div>
+
+                <div class="notif-stack">
+                  <div class="notif n1">
+                    <div class="notif-app">
+                      <span class="napp-icon">C</span>
+                      <span class="napp-name">CBIE</span>
+                      <span class="napp-time">agora</span>
+                    </div>
+                    <div class="notif-title">PLD SE/CO em alta acelerada</div>
+                    <div class="notif-text">Subiu <b>+12,3%</b> nas últimas 24h. Toque para ver o gráfico.</div>
+                  </div>
+
+                  <div class="notif n2">
+                    <div class="notif-app">
+                      <span class="napp-icon">C</span>
+                      <span class="napp-name">CBIE</span>
+                      <span class="napp-time">5 min</span>
+                    </div>
+                    <div class="notif-title">Brent atinge US$ 84,30</div>
+                    <div class="notif-text">+1,8% após dados da OPEP+.</div>
+                  </div>
+
+                  <div class="notif n3">
+                    <div class="notif-app">
+                      <span class="napp-icon">C</span>
+                      <span class="napp-name">CBIE</span>
+                      <span class="napp-time">18 min</span>
+                    </div>
+                    <div class="notif-title">Nova Resolução ANEEL nº 1.247/2026</div>
+                    <div class="notif-text">Publicada hoje. Impacto: tarifas de distribuição.</div>
+                  </div>
+
+                  <div class="notif n4">
+                    <div class="notif-app">
+                      <span class="napp-icon">C</span>
+                      <span class="napp-name">CBIE</span>
+                      <span class="napp-time">1 h</span>
+                    </div>
+                    <div class="notif-title">Reservatórios SE/CO acima de 70%</div>
+                    <div class="notif-text">Cenário hidrológico favorável para o próximo trimestre.</div>
+                  </div>
+
+                  <div class="notif n5">
+                    <div class="notif-app">
+                      <span class="napp-icon">C</span>
+                      <span class="napp-name">CBIE</span>
+                      <span class="napp-time">2 h</span>
+                    </div>
+                    <div class="notif-title">Relatório mensal disponível</div>
+                    <div class="notif-text">Outlook de Preços · Maio/2026 já no app.</div>
+                  </div>
+                </div>
+
+                <div class="lock-bottom">
+                  <div class="lock-bar"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== SLIDE 5 · CHAT IA CBIE ========== -->
+    <section class="slide slide-chat" data-slide="chat">
+      <div class="slide-side">
+        <div class="side-tag">04 · Agente IA · Exclusivo Mobile</div>
+        <h2 class="side-title">
+          O <span class="side-accent">agente CBIE</span> que pensa como um analista.
+        </h2>
+        <p class="side-desc">
+          Pergunte sobre PLD, Brent, reservatórios, legislação ou tendências. O agente conecta os dados do sistema CBIE
+          e responde em segundos.
+        </p>
+        <div class="chat-feat">
+          <div class="chat-feat-item">
+            <div class="cfi-icon">∞</div>
+            <div>
+              <div class="cfi-title">Contexto contínuo</div>
+              <div class="cfi-sub">Lembra do que vocês conversaram antes</div>
+            </div>
+          </div>
+          <div class="chat-feat-item">
+            <div class="cfi-icon">⚡</div>
+            <div>
+              <div class="cfi-title">Respostas com dados</div>
+              <div class="cfi-sub">Conectado às mesmas fontes do sistema web</div>
+            </div>
+          </div>
+          <div class="chat-feat-item">
+            <div class="cfi-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 17l5-5 4 4 8-9"/>
+                <path d="M14 7h6v6"/>
+              </svg>
+            </div>
+            <div>
+              <div class="cfi-title">Gráficos no chat</div>
+              <div class="cfi-sub">Visualizações sob demanda</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="slide-stage">
+        <div class="phone phone-tilt">
+          <div class="phone-glow"></div>
+          <div class="phone-frame">
+            <div class="phone-notch"></div>
+            <div class="phone-screen">
+              <div class="chat-screen">
+                <div class="status-bar">
+                  <span>9:41</span>
+                  <div class="status-icons">
+                    <span class="si signal"></span>
+                    <span class="si wifi"></span>
+                    <span class="si battery"></span>
+                  </div>
+                </div>
+
+                <div class="chat-header">
+                  <div class="chat-back">‹</div>
+                  <div class="chat-id">
+                    <div class="chat-avatar">
+                      <span class="ca-c">C</span>
+                      <span class="ca-ring"></span>
+                    </div>
+                    <div>
+                      <div class="chat-name">Agente CBIE</div>
+                      <div class="chat-status"><span class="online"></span> online · IA</div>
+                    </div>
+                  </div>
+                  <div class="chat-menu">⋮</div>
+                </div>
+
+                <div class="chat-body">
+                  <div class="chat-day">Hoje · 09:38</div>
+
+                  <div class="msg msg-ai">
+                    <div class="msg-bubble">
+                      Bom dia, Ricardo! Vi que o PLD do SE/CO subiu 12,3% essa madrugada. Quer um resumo?
+                    </div>
+                  </div>
+
+                  <div class="msg msg-user">
+                    <div class="msg-bubble">
+                      Quero. E compara com a média dos últimos 30 dias.
+                    </div>
+                  </div>
+
+                  <div class="msg msg-ai">
+                    <div class="msg-bubble">
+                      Claro. PLD atual: <b>R$ 287,40/MWh</b>. Média 30d: <b>R$ 243,80</b>. Acima da média em
+                      <b>+17,9%</b>.
+                      <div class="msg-chart">
+                        <svg viewBox="0 0 200 60" preserveAspectRatio="none">
+                          <defs>
+                            <linearGradient id="cg1" x1="0" y1="0" x2="0" y2="60" gradientUnits="userSpaceOnUse">
+                              <stop offset="0" stop-color="#ff7a1a" stop-opacity=".5" />
+                              <stop offset="1" stop-color="#ff7a1a" stop-opacity="0" />
+                            </linearGradient>
+                          </defs>
+                          <path
+                            d="M0,40 L20,38 L40,42 L60,30 L80,34 L100,28 L120,22 L140,26 L160,18 L180,14 L200,8 L200,60 L0,60 Z"
+                            fill="url(#cg1)" />
+                          <path d="M0,40 L20,38 L40,42 L60,30 L80,34 L100,28 L120,22 L140,26 L160,18 L180,14 L200,8"
+                            stroke="#ff7a1a" stroke-width="2" fill="none" stroke-linecap="round" />
+                        </svg>
+                        <div class="msg-chart-cap">PLD · últimos 30 dias</div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="msg msg-user">
+                    <div class="msg-bubble">
+                      O que está puxando isso?
+                    </div>
+                  </div>
+
+                  <div class="msg msg-ai">
+                    <div class="msg-bubble typing">
+                      <span class="dot d1"></span>
+                      <span class="dot d2"></span>
+                      <span class="dot d3"></span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="chat-input">
+                  <div class="ci-field">Pergunte algo ao agente CBIE…</div>
+                  <button class="ci-send">↑</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Navegação inferior -->
+  <nav class="deck-nav" id="deckNav">
+    <button class="nav-arrow" id="navPrev" aria-label="Anterior">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"
+        stroke-linejoin="round">
+        <path d="M15 18l-6-6 6-6" />
+      </svg>
+    </button>
+
+    <div class="nav-steps" id="navSteps">
+      <button class="step is-active" data-go="0" aria-label="Slide 1"></button>
+      <button class="step" data-go="1" aria-label="Slide 2"></button>
+      <button class="step" data-go="2" aria-label="Slide 3"></button>
+      <button class="step" data-go="3" aria-label="Slide 4"></button>
+      <button class="step" data-go="4" aria-label="Slide 5"></button>
+    </div>
+
+    <button class="nav-arrow" id="navNext" aria-label="Próximo">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"
+        stroke-linejoin="round">
+        <path d="M9 6l6 6-6 6" />
+      </svg>
+    </button>
+  </nav>
+
+  <div class="slide-counter">
+    <span class="sc-current">01</span>
+    <span class="sc-sep">/</span>
+    <span class="sc-total">05</span>
+  </div>
+
+  <div class="hint">
+    use ← → ou espaço para navegar
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="script.js?v=2"></script>
+</body>
+
+</html>
