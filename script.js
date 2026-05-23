@@ -26,13 +26,11 @@
     cover(slide) {
       const reveals = slide.querySelectorAll('.reveal');
       const tl = gsap.timeline({ defaults: { ease: 'power3.out' } });
-      tl.from(slide.querySelector('.cover-tag'),     { y: 20, opacity: 0, duration: 0.7 })
-        .from(reveals,                                { y: 60, opacity: 0, duration: 0.9, stagger: 0.10 }, '-=0.3')
-        .from(slide.querySelector('.cover-desc'),    { y: 20, opacity: 0, duration: 0.7 }, '-=0.4')
-        .from(slide.querySelectorAll('.cover-meta-item'), { y: 30, opacity: 0, duration: 0.6, stagger: 0.10 }, '-=0.3')
+      tl.from(slide.querySelector('.cover-tag'), { y: 20, opacity: 0, duration: 0.7 })
+        .from(reveals, { y: 60, opacity: 0, duration: 0.9, stagger: 0.10 }, '-=0.3')
         .from(slide.querySelector('.cover-phone-stage'), {
           x: 100, opacity: 0, rotateY: -30, duration: 1.1, ease: 'power3.out'
-        }, '-=1.2');
+        }, '-=1.0');
     },
 
     login(slide) {
@@ -61,7 +59,7 @@
       tl.from(slide.querySelector('.side-tag'),   { y: 20, opacity: 0, duration: 0.6 })
         .from(slide.querySelector('.side-title'),  { y: 40, opacity: 0, duration: 0.8 }, '-=0.3')
         .from(slide.querySelector('.side-desc'),   { y: 20, opacity: 0, duration: 0.6 }, '-=0.4')
-        .from(slide.querySelectorAll('.side-card'), { y: 30, opacity: 0, duration: 0.6, stagger: 0.08 }, '-=0.3')
+        .from(slide.querySelectorAll('.side-list li'), { y: 16, opacity: 0, duration: 0.5, stagger: 0.08 }, '-=0.3')
         .from(phone, { x: 120, opacity: 0, rotateY: -25, duration: 1.0 }, '-=1.0')
         .from(slide.querySelector('.dash-header'), { y: -20, opacity: 0, duration: 0.5 }, '-=0.5')
         .from(slide.querySelectorAll('.kpi'),      { y: 24, opacity: 0, duration: 0.6, stagger: 0.10 }, '-=0.3')
@@ -166,6 +164,19 @@
     nextBtn.disabled = index === total - 1;
 
     current = index;
+
+    // Mata tweens em andamento + limpa estilos inline GSAP no slide incoming
+    // (evita elementos ficarem presos com opacity 0 quando navegação é rápida)
+    const animTargets = incoming.querySelectorAll(
+      '.cover-tag, .reveal, .cover-desc, .cover-meta-item, .cover-phone-stage, ' +
+      '.side-tag, .side-title, .side-desc, .side-list li, .side-card, ' +
+      '.phone, .login-hero, .login-title, .login-sub, .input, .login-btn, .login-bio, ' +
+      '.dash-header, .kpi, .dash-chart-card, .mini, .dash-tabs, ' +
+      '.lock-time, .notif, ' +
+      '.chat-header, .chat-day, .msg, .chat-input, .chat-feat-item'
+    );
+    gsap.killTweensOf(animTargets);
+    gsap.set(animTargets, { clearProps: 'opacity,transform,x,y,scale,rotateX,rotateY' });
 
     // Dispara animações do slide ativo (síncrono = sem flash)
     const key = incoming.dataset.slide;
