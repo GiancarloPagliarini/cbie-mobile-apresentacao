@@ -119,6 +119,39 @@
           ease: 'back.out(1.3)'
         }, '-=0.2')
         .from(slide.querySelector('.chat-input'),  { y: 30, opacity: 0, duration: 0.5 }, '-=0.4');
+    },
+
+    invest(slide) {
+      const mainCard  = slide.querySelector('.invest-card-main');
+      const addonCard = slide.querySelector('.invest-card-addon');
+      const plus      = slide.querySelector('.invest-plus');
+      const mainAmount  = mainCard.querySelector('.invest-amount');
+      const mainCents   = mainCard.querySelector('.invest-cents');
+      const mainCurr    = mainCard.querySelector('.invest-curr');
+      const addonAmount = addonCard.querySelector('.invest-amount');
+      const mainItems   = mainCard.querySelectorAll('.invest-list li');
+      const addonItems  = addonCard.querySelectorAll('.addon-list li');
+      const tl = gsap.timeline({ defaults: { ease: 'power3.out' } });
+
+      tl.from(slide.querySelector('.side-tag'),   { y: 20, opacity: 0, duration: 0.6 })
+        .from(slide.querySelector('.side-title'),  { y: 40, opacity: 0, duration: 0.8 }, '-=0.3')
+        .from(slide.querySelector('.side-desc'),   { y: 20, opacity: 0, duration: 0.6 }, '-=0.4')
+        .from(slide.querySelectorAll('.side-list li'), { y: 16, opacity: 0, duration: 0.5, stagger: 0.07 }, '-=0.3')
+        .from(mainCard,  { x: 80,  opacity: 0, scale: 0.94, duration: 0.9 }, '-=1.0')
+        .from(addonCard, { x: 100, opacity: 0, scale: 0.94, duration: 0.9 }, '-=0.8')
+        .from(plus,      { scale: 0, opacity: 0, duration: 0.5, ease: 'back.out(2)' }, '-=0.5')
+        .from(mainCard.querySelector('.invest-header'), { y: -20, opacity: 0, duration: 0.5 }, '-=0.6')
+        .from(mainCard.querySelector('.invest-label'),  { y: 14, opacity: 0, duration: 0.4 }, '-=0.3')
+        .from(mainCurr,   { x: -20, opacity: 0, duration: 0.5 }, '-=0.2')
+        .from(mainAmount, { scale: 0.6, opacity: 0, duration: 0.8, ease: 'back.out(1.6)' }, '-=0.4')
+        .from(mainCents,  { x: -10, opacity: 0, duration: 0.5 }, '-=0.5')
+        .from(mainItems,  { x: 24, opacity: 0, duration: 0.5, stagger: 0.08 }, '-=0.2')
+        .from(mainCard.querySelector('.invest-cta'), { y: 24, opacity: 0, duration: 0.5, ease: 'back.out(1.3)' }, '-=0.2')
+        .from(addonCard.querySelector('.addon-badge'),   { y: -14, opacity: 0, duration: 0.4 }, '-=1.6')
+        .from(addonCard.querySelector('.addon-title'),   { y: 14, opacity: 0, duration: 0.4 }, '-=0.3')
+        .from(addonCard.querySelector('.addon-tagline'), { y: 10, opacity: 0, duration: 0.4 }, '-=0.3')
+        .from(addonAmount, { scale: 0.6, opacity: 0, duration: 0.7, ease: 'back.out(1.5)' }, '-=0.2')
+        .from(addonItems,  { x: 20, opacity: 0, duration: 0.45, stagger: 0.08 }, '-=0.3');
     }
   };
 
@@ -173,10 +206,14 @@
       '.phone, .login-hero, .login-title, .login-sub, .input, .login-btn, .login-bio, ' +
       '.dash-header, .kpi, .dash-chart-card, .mini, .dash-tabs, ' +
       '.lock-time, .notif, ' +
-      '.chat-header, .chat-day, .msg, .chat-input, .chat-feat-item'
+      '.chat-header, .chat-day, .msg, .chat-input, .chat-feat-item, ' +
+      '.invest-card, .invest-card-main, .invest-card-addon, .invest-plus, ' +
+      '.invest-header, .invest-label, .invest-curr, .invest-amount, .invest-cents, ' +
+      '.invest-sub, .invest-divider, .invest-list li, .invest-cta, ' +
+      '.addon-badge, .addon-title, .addon-tagline, .addon-list li'
     );
     gsap.killTweensOf(animTargets);
-    gsap.set(animTargets, { clearProps: 'opacity,transform,x,y,scale,rotateX,rotateY' });
+    gsap.set(animTargets, { clearProps: 'opacity,transform,x,y,scale,rotateX,rotateY,scaleX' });
 
     // Dispara animações do slide ativo (síncrono = sem flash)
     const key = incoming.dataset.slide;

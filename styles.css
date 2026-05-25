@@ -1833,6 +1833,379 @@ button {
 }
 
 /* ============================================================
+   SLIDE 06 · INVESTIMENTO
+   ============================================================ */
+.slide-invest {
+  display: grid;
+  grid-template-columns: 0.75fr 1.25fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.invest-stage {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 600px;
+}
+
+.invest-cards {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: stretch;
+  gap: 14px;
+  width: 100%;
+}
+
+.invest-plus {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-size: 32px;
+  font-weight: 300;
+  color: var(--orange-2);
+  opacity: 0.6;
+  flex-shrink: 0;
+}
+
+.invest-glow-bg {
+  position: absolute;
+  inset: -60px;
+  background:
+    radial-gradient(circle at 50% 50%, rgba(255, 122, 26, 0.45), transparent 55%),
+    radial-gradient(circle at 70% 30%, rgba(255, 148, 71, 0.30), transparent 60%);
+  filter: blur(60px);
+  z-index: 1;
+  pointer-events: none;
+  animation: investPulse 5s var(--ease-in-out) infinite alternate;
+}
+
+@keyframes investPulse {
+  0%   { transform: scale(0.95); opacity: 0.7; }
+  100% { transform: scale(1.05); opacity: 1; }
+}
+
+.invest-card {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  padding: 36px 32px 32px;
+  background:
+    linear-gradient(160deg, rgba(255, 122, 26, 0.10) 0%, rgba(255, 255, 255, 0.04) 60%),
+    var(--glass-bg-hi);
+  border: 1px solid rgba(255, 122, 26, 0.30);
+  border-radius: 28px;
+  backdrop-filter: blur(var(--glass-blur)) saturate(140%);
+  -webkit-backdrop-filter: blur(var(--glass-blur)) saturate(140%);
+  box-shadow:
+    var(--shadow-orange),
+    var(--shadow-2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.10);
+  overflow: hidden;
+}
+
+.invest-header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 32px;
+}
+
+.invest-logo {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 22px;
+  letter-spacing: 0.06em;
+}
+
+.invest-logo span:nth-child(1),
+.invest-logo span:nth-child(2),
+.invest-logo span:nth-child(4) {
+  color: var(--white);
+}
+
+.invest-logo span:nth-child(3) {
+  background: linear-gradient(135deg, var(--orange-1), var(--orange-3));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.invest-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 5px 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 122, 26, 0.40);
+  background: rgba(255, 122, 26, 0.10);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  color: var(--orange-2);
+}
+
+.invest-pill-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--orange-1);
+  box-shadow: 0 0 8px var(--orange-glow);
+  animation: pulse 1.6s ease-in-out infinite;
+}
+
+.invest-label {
+  position: relative;
+  font-size: 12px;
+  letter-spacing: 0.30em;
+  text-transform: uppercase;
+  color: var(--w-60);
+  margin-bottom: 12px;
+}
+
+.invest-amount-row {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.invest-curr {
+  font-family: var(--font-display);
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--w-80);
+  margin-top: 14px;
+}
+
+.invest-amount {
+  font-family: var(--font-display);
+  font-size: 76px;
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: -0.04em;
+  background: linear-gradient(135deg, #fff 0%, var(--orange-2) 50%, var(--orange-1) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-shadow: 0 0 60px rgba(255, 122, 26, 0.30);
+}
+
+.invest-cents {
+  font-family: var(--font-display);
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--w-60);
+  margin-top: 14px;
+  letter-spacing: -0.02em;
+}
+
+.invest-sub {
+  position: relative;
+  font-size: 14px;
+  color: var(--w-60);
+  margin-bottom: 28px;
+}
+
+.invest-divider {
+  position: relative;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255, 122, 26, 0.40), transparent);
+  margin: 0 -10px 24px;
+}
+
+.invest-list {
+  position: relative;
+  list-style: none;
+  padding: 0;
+  margin: 0 0 30px;
+}
+
+.invest-list li {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 10px 0;
+}
+
+.il-check {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--orange-1), var(--orange-deep));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 4px 14px rgba(255, 122, 26, 0.45);
+}
+
+.il-check svg {
+  width: 14px;
+  height: 14px;
+  color: white;
+}
+
+.il-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--white);
+  margin-bottom: 2px;
+}
+
+.il-sub {
+  font-size: 12px;
+  color: var(--w-60);
+}
+
+.invest-cta {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  padding: 16px;
+  border-radius: 16px;
+  background: linear-gradient(135deg, var(--orange-1), var(--orange-deep));
+  font-family: var(--font-display);
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: white;
+  box-shadow: 0 14px 36px rgba(255, 122, 26, 0.45);
+  cursor: pointer;
+  transition: transform 0.3s var(--ease-out), box-shadow 0.3s var(--ease-out);
+}
+
+.invest-cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 20px 46px rgba(255, 122, 26, 0.55);
+}
+
+.invest-arrow {
+  font-size: 18px;
+  transition: transform 0.3s var(--ease-out);
+}
+
+.invest-cta:hover .invest-arrow {
+  transform: translateX(4px);
+}
+
+/* --- Card principal vs Addon --- */
+.invest-card-main {
+  flex: 1.25;
+}
+
+.invest-card-addon {
+  flex: 1;
+  padding: 32px 26px 28px;
+  background:
+    linear-gradient(160deg, rgba(255, 122, 26, 0.06) 0%, rgba(255, 255, 255, 0.03) 70%),
+    rgba(255, 255, 255, 0.035);
+  border: 1px solid rgba(255, 148, 71, 0.20);
+  box-shadow:
+    0 14px 40px rgba(0, 0, 0, 0.40),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+.addon-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 5px 11px;
+  border-radius: 999px;
+  background: rgba(255, 122, 26, 0.12);
+  border: 1px solid rgba(255, 122, 26, 0.32);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.20em;
+  color: var(--orange-2);
+  margin-bottom: 18px;
+}
+
+.addon-badge svg {
+  width: 13px;
+  height: 13px;
+}
+
+.addon-title {
+  font-family: var(--font-display);
+  font-size: 32px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--white);
+  margin-bottom: 4px;
+  line-height: 1;
+}
+
+.addon-tagline {
+  font-size: 12px;
+  color: var(--w-60);
+  margin-bottom: 22px;
+  line-height: 1.4;
+}
+
+.invest-card-addon .invest-divider {
+  margin: 0 -6px 22px;
+}
+
+.invest-amount-row-sm {
+  margin-bottom: 8px;
+}
+
+.invest-amount-sm {
+  font-size: 54px !important;
+}
+
+.invest-card-addon .invest-curr {
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+.invest-cents-sm {
+  font-size: 20px !important;
+  margin-top: 10px !important;
+}
+
+.invest-card-addon .invest-sub {
+  margin-bottom: 22px;
+}
+
+.addon-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.addon-list li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 7px 0;
+  font-size: 13px;
+  color: var(--w-80);
+  line-height: 1.4;
+}
+
+.il-check.sm {
+  width: 20px;
+  height: 20px;
+}
+
+.il-check.sm svg {
+  width: 10px;
+  height: 10px;
+}
+
+/* ============================================================
    RESPONSIVO BÁSICO
    ============================================================ */
 @media (max-width: 1280px) {
@@ -1851,8 +2224,26 @@ button {
   .slide-login,
   .slide-dashboard,
   .slide-notifications,
-  .slide-chat {
+  .slide-chat,
+  .slide-invest {
     gap: 50px;
+  }
+
+  .invest-amount {
+    font-size: 60px;
+  }
+
+  .invest-amount-sm {
+    font-size: 44px !important;
+  }
+
+  .invest-cards {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .invest-plus {
+    font-size: 24px;
   }
 }
 
@@ -1862,10 +2253,19 @@ button {
   .slide-login,
   .slide-dashboard,
   .slide-notifications,
-  .slide-chat {
+  .slide-chat,
+  .slide-invest {
     grid-template-columns: 1fr;
     text-align: center;
     overflow: auto;
+  }
+
+  .invest-amount {
+    font-size: 54px;
+  }
+
+  .invest-stage {
+    min-height: 0;
   }
 
   .slide-side {
