@@ -146,12 +146,14 @@
         .from(mainAmount, { scale: 0.6, opacity: 0, duration: 0.8, ease: 'back.out(1.6)' }, '-=0.4')
         .from(mainCents,  { x: -10, opacity: 0, duration: 0.5 }, '-=0.5')
         .from(mainItems,  { x: 24, opacity: 0, duration: 0.5, stagger: 0.08 }, '-=0.2')
-        .from(mainCard.querySelector('.invest-cta'), { y: 24, opacity: 0, duration: 0.5, ease: 'back.out(1.3)' }, '-=0.2')
-        .from(addonCard.querySelector('.addon-badge'),   { y: -14, opacity: 0, duration: 0.4 }, '-=1.6')
+        .from(addonCard.querySelector('.addon-badge'),   { y: -14, opacity: 0, duration: 0.4 }, '-=1.2')
         .from(addonCard.querySelector('.addon-title'),   { y: 14, opacity: 0, duration: 0.4 }, '-=0.3')
         .from(addonCard.querySelector('.addon-tagline'), { y: 10, opacity: 0, duration: 0.4 }, '-=0.3')
         .from(addonAmount, { scale: 0.6, opacity: 0, duration: 0.7, ease: 'back.out(1.5)' }, '-=0.2')
-        .from(addonItems,  { x: 20, opacity: 0, duration: 0.45, stagger: 0.08 }, '-=0.3');
+        .from(addonItems,  { x: 20, opacity: 0, duration: 0.45, stagger: 0.08 }, '-=0.3')
+        .from(addonCard.querySelector('.addon-total'), { y: 24, opacity: 0, scale: 0.96, duration: 0.6, ease: 'back.out(1.4)' }, '-=0.1')
+        .from(addonCard.querySelector('.addon-total-amount'), { scale: 0.7, opacity: 0, duration: 0.6, ease: 'back.out(1.6)' }, '-=0.3')
+        .from(addonCard.querySelector('.addon-total-breakdown'), { y: 8, opacity: 0, duration: 0.4 }, '-=0.2');
     }
   };
 
@@ -209,8 +211,9 @@
       '.chat-header, .chat-day, .msg, .chat-input, .chat-feat-item, ' +
       '.invest-card, .invest-card-main, .invest-card-addon, .invest-plus, ' +
       '.invest-header, .invest-label, .invest-curr, .invest-amount, .invest-cents, ' +
-      '.invest-sub, .invest-divider, .invest-list li, .invest-cta, ' +
-      '.addon-badge, .addon-title, .addon-tagline, .addon-list li'
+      '.invest-sub, .invest-divider, .invest-list li, ' +
+      '.addon-badge, .addon-title, .addon-tagline, .addon-list li, ' +
+      '.addon-total, .addon-total-amount, .addon-total-breakdown'
     );
     gsap.killTweensOf(animTargets);
     gsap.set(animTargets, { clearProps: 'opacity,transform,x,y,scale,rotateX,rotateY,scaleX' });
